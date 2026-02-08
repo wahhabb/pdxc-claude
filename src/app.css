@@ -1,0 +1,189 @@
+/* PDX Commons - Global Styles */
+
+/* CSS Reset and Base */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Color Palette */
+  --color-bg-light: #ffffff;
+  --color-bg-dark: #f5f5f5;
+  --color-bg-darker: #333333;
+  --color-text-primary: #333333;
+  --color-text-secondary: #666666;
+  --color-accent: #8b7355;
+  --color-accent-light: #a89080;
+  --color-border: #dddddd;
+
+  /* Typography */
+  --font-body: 'Assistant', sans-serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+
+  /* Font Sizes */
+  --font-size-base: 23px;
+  --font-size-lg: 23px;
+  --font-size-xl: 28px;
+  --font-size-2xl: 32px;
+  --font-size-3xl: 48px;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 2.5rem;
+  --spacing-2xl: 3rem;
+
+  /* Breakpoints (for reference in media queries) */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Layout */
+  --max-width: 1200px;
+  --header-height: 80px;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Skip Link - Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-bg-darker);
+  color: white;
+  padding: 8px 16px;
+  z-index: 10000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: Lato, sans-serif;
+  font-weight: 600;
+  line-height: 1.6em;
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-sm);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  letter-spacing: 2.5px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  letter-spacing: 2.2px;
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  letter-spacing: 2px;
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #004499;
+  text-decoration: underline;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+/* Utility Classes */
+.section {
+  padding: var(--spacing-sm) 0;
+}
+
+.section-dark {
+  background-color: var(--color-bg-dark);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Main content margins - but not for full-width elements */
+main {
+  /* Margins will be applied via the .content-with-margins class */
+}
+
+.content-with-margins {
+  margin-left: var(--spacing-md);
+  margin-right: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .content-with-margins {
+    margin-left: var(--spacing-lg);
+    margin-right: var(--spacing-lg);
+  }
+}
+
+/* Image Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
