@@ -36,13 +36,25 @@
 			</div>
 
 			<article class="page-content">
-				<p>
-					See videos showing PDX Commons building and people.
-				</p>
+				<div class="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/ufX9pVEL9cI"
+						title="PDX Commons"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
 
-				<p>
-					Video tours will be available here when new content is added. In the meantime, please <a href="/contact">contact us</a> to schedule an in-person tour of our community.
-				</p>
+				<div class="video-container">
+					<iframe
+						src="https://www.youtube.com/embed/8Krud2r5yFE"
+						title="All About PDX Commons (2020 video)"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
 			</article>
 		</main>
 	</div>
@@ -90,6 +102,22 @@
 
 	.page-content a:hover {
 		text-decoration: underline;
+	}
+
+	.video-container {
+		position: relative;
+		padding-bottom: 56.25%; /* 16:9 aspect ratio */
+		height: 0;
+		overflow: hidden;
+		margin-bottom: var(--spacing-lg);
+	}
+
+	.video-container iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	.cta-wrapper {
